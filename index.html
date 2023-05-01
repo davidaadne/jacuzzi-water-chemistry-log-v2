@@ -20,21 +20,28 @@
 <body>\
   <h1>Outdoor Jacuzzi Water Chemistry Log</h1>\
 \
-  <form id="log-form">\
-    <label for="date">Date:</label>\
-    <input type="date" id="date" required>\
-\
-    <label for="ph">pH:</label>\
-    <input type="number" id="ph" step="0.01" min="0" max="14" required>\
-\
-    <label for="alkalinity">Alkalinity (ppm):</label>\
-    <input type="number" id="alkalinity" min="0" required>\
-\
-    <label for="chlorine">Chlorine/Bromine (ppm):</label>\
-    <input type="number" id="chlorine" min="0" required>\
-\
-    <button type="submit">Log Data</button>\
-  </form>\
+  <form id="log-form">
+  <fieldset>
+    <legend>Log Water Chemistry</legend>
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date" required>
+    <br>
+    <label for="ph">pH:</label>
+    <input type="number" id="ph" name="ph" step="0.01" min="0" max="14" required>
+    <br>
+    <label for="alkalinity">Alkalinity (ppm):</label>
+    <input type="number" id="alkalinity" name="alkalinity" step="1" min="0" required>
+    <br>
+    <label for="hardness">Hardness (ppm):</label>
+    <input type="number" id="hardness" name="hardness" step="1" min="0" required>
+    <br>
+    <label for="chlorine">Free Chlorine (ppm):</label>
+    <input type="number" id="chlorine" name="chlorine" step="0.1" min="0" required>
+    <br>
+    <input type="submit" value="Submit">
+  </fieldset>
+</form>
+
 \
   <table id="log-table">\
     <thead>\
