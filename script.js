@@ -1,9 +1,13 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2708
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+document.getElementById('log-form').addEventListener('submit', function (event) {
+  event.preventDefault();
 
-\f0\fs24 \cf0 console.log('JavaScript is working.');\
-}
+  const logData = {
+    date: event.target.date.value,
+    ph: parseFloat(event.target.ph.value),
+    alkalinity: parseInt(event.target.alkalinity.value),
+    hardness: parseInt(event.target.hardness.value),
+    chlorine: parseFloat(event.target.chlorine.value),
+  };
+
+  console.log(logData);
+});
